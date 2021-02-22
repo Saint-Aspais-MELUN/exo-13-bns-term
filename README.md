@@ -1,60 +1,25 @@
-Exercice 1
- 
-Écrire une fonction tri_selection qui prend en paramètre une liste tab de nombres 
-entiers et qui renvoie le tableau trié par ordre croissant. 
+# Sujet 13
 
-On utilisera l’algorithme suivant : 
-* on recherche le plus petit élément du tableau, et on l'échange avec l'élément d'indice 
+Ce sujet comporte deux exercices : voir le PDF ci-joint
 
-* on recherche le second plus petit élément du tableau, et on l'échange avec l'élément 0 ; 
-d'indice 1 ;  
+Pour le premier exercice, vous devez écrire une fonction `tri_selection` 
 
-* on continue de cette façon jusqu'à ce que le tableau soit entièrement trié. 
 
-Exemple : 
+Pour le deuxième, il s'agit de compléter le code fourni.
 
->>> tri_selection([1,52,6,-9,12]) 
-[-9, 1, 6, 12, 52] 
- 
-EXERCICE 2 (4 points) 
+- Les fichiers à compléter sont dans le dossier `exercices`.
 
-Le jeu du « plus ou moins » consiste à deviner un nombre entier choisi entre 1 et 99. 
+- Le dossier `tests` correspond aux tests fournis par l'énoncé.
+Il ne faut surtout pas modifier ces fichiers sous peine d'annulation de l'épreuve.
 
-Un élève de NSI décide de le coder en langage Python de la manière suivante : 
+- Si vous travaillez avec repl.it, modifier le fichier .replit :  
+<pre><code style="background-color:black;color:white;width:100%;font-size: large;">
+# Si vous voulez exécuter l'exercice 1 : Enlever le # de la ligne ci-dessous
+# run = "python3 exercices/exercice1.py"
 
-le programme génère un nombre entier aléatoire compris entre 1 et 99 ; 
+# Si vous voulez exécuter l'exercice 2 : Enlever le # de la ligne ci-dessous
+# run = "python3 exercices/exercice2.py"
 
-* si la proposition de l’utilisateur est plus petite que le nombre cherché, l’utilisateur en 
-est averti. Il peut alors en tester un autre ; 
+language = "python3"
+</code></pre>
 
-* si la proposition de l’utilisateur est plus grande que le nombre cherché, l’utilisateur en 
-est averti. Il peut alors en tester un autre ; 
-
-* si l’utilisateur trouve le bon nombre en 10 essais ou moins, il gagne ; 
-* si l’utilisateur a fait plus de 10 essais sans trouver le bon nombre, il perd. 
-
-La fonction randint est utilisée. Si a et b sont des entiers, randint(a,b) renvoie un 
-nombre entier compris entre a et b. 
-
-Compléter le code ci-dessous et le tester :  
-
- 
-from random import randint 
-
-def plus_ou_moins(): 
-    nb_mystere = randint(1,...) 
-    nb_test = int(input("Proposez un nombre entre 1 et 99 : ")) 
-    compteur = ... 
-
-    while nb_mystere != ... and compteur < ... : 
-        compteur = compteur + ... 
-        if nb_mystere ... nb_test: 
-            nb_test = int(input("Trop petit ! Testez encore : ")) 
-        else: 
-            nb_test = int(input("Trop grand ! Testez encore : ")) 
-
-    if nb_mystere == nb_test: 
-        print ("Bravo ! Le nombre était ",...) 
-        print("Nombre d'essais: ",...) 
-    else: 
-        print ("Perdu ! Le nombre était ",...) 
